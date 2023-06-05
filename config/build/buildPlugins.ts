@@ -24,10 +24,10 @@ export function buildPlugins({
     new BundleAnalyzerPlugin(),
   ];
 
-  if (isDev) {
-    plugins.push(new webpack.HotModuleReplacementPlugin());
-    plugins.push(new BundleAnalyzerPlugin());
-  }
+  // if (isDev) {
+  //   plugins.push(new webpack.HotModuleReplacementPlugin());
+  //   plugins.push(new BundleAnalyzerPlugin());
+  // }
 
   return plugins;
 }
