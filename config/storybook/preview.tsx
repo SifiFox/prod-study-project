@@ -1,6 +1,5 @@
 import type { Preview } from "@storybook/react";
 import React from "react";
-// import { StyleDecorator } from "src/shared/config/StyleDecorator/StyleDecorator";
 import { StyleDecorator } from "../../src/shared/config/storybook/StyleDecorator/StyleDecorator";
 import { ThemeDecorator } from "../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { RouterDecorator } from "../../src/shared/config/storybook/RouterDecorator/RouterDecorator";
