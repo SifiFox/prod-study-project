@@ -14,5 +14,8 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  core: {
+    enableCrashReports: true,
+  },
 };
 export default config;
