@@ -1,9 +1,7 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 
-export const RouterDecorator = (Story: any) => {
-  return (
+export const RouterDecorator = (Story: any) => (
     <BrowserRouter>
-      <Story />
+        <Story />
     </BrowserRouter>
-  );
-};
+);

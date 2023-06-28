@@ -1,19 +1,19 @@
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from 'shared/lib/classNames/classNames';
 
-import { ButtonHTMLAttributes, FC } from "react";
-import cls from "./Button.module.scss";
+import { ButtonHTMLAttributes, FC } from 'react';
+import cls from './Button.module.scss';
 
 export enum ThemeButton {
-  CLEAR = "clear",
-  OUTLINE = "outline",
-  BACKGROUND = "background",
-  BACKGROUND_INVERTED = "backgroundInverted",
+  CLEAR = 'clear',
+  OUTLINE = 'outline',
+  BACKGROUND = 'background',
+  BACKGROUND_INVERTED = 'backgroundInverted',
 }
 
 export enum ButtonSize {
-  L = "size_l",
-  M = "size_m",
-  XL = "size_xl",
+  L = 'size_l',
+  M = 'size_m',
+  XL = 'size_xl',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -24,20 +24,23 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-  const { className, children, theme, square, size, ...otherProps } = props;
+    const {
+        className, children, theme, square, size, ...otherProps
+    } = props;
 
-  const mods: Record<string, boolean> = {
-    [cls[theme]]: true,
-    [cls[size]]: true,
-    [cls.square]: square,
-  };
+    const mods: Record<string, boolean> = {
+        [cls[theme]]: true,
+        [cls[size]]: true,
+        [cls.square]: square,
+    };
 
-  return (
-    <button
-      className={classNames(cls.Button, mods, [className])}
-      {...otherProps}
-    >
-      {children}
-    </button>
-  );
+    return (
+        // eslint-disable-next-line react/button-has-type
+        <button
+            className={classNames(cls.Button, mods, [className])}
+            {...otherProps}
+        >
+            {children}
+        </button>
+    );
 };

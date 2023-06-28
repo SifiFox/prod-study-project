@@ -1,23 +1,22 @@
-import { useEffect, useState } from "react";
-import { Button } from "shared/ui/Button/Button";
+import { useEffect, useState } from 'react';
+import { Button } from 'shared/ui/Button/Button';
 
-interface BugButtonProps {
-  className?: string;
-}
+const textError = 'Throw error';
+
 // Компонент для тестирования обработки ошибок
-export const BugButton = ({ className }: BugButtonProps) => {
-  const [error, setError] = useState(false);
-  const onThrow = () => {
-    setError(true);
-  };
+export const BugButton = () => {
+    const [error, setError] = useState(false);
+    const onThrow = () => {
+        setError(true);
+    };
 
-  useEffect(() => {
+    useEffect(() => {
     // console.log(error);
 
-    if (error) {
-      throw new Error();
-    }
-  }, [error]);
+        if (error) {
+            throw new Error();
+        }
+    }, [error]);
 
-  return <Button onClick={onThrow}>Throw error</Button>;
+    return <Button onClick={onThrow}>{textError}</Button>;
 };

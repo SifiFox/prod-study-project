@@ -1,9 +1,7 @@
-import "app/styles/index.scss";
+import 'app/styles/index.scss';
 
-export const StyleDecorator = (Story: any) => {
-  return (
+export const StyleDecorator = (Story: any) => (
     <div>
-      <Story />
+        <Story />
     </div>
-  );
-};
+);

@@ -1,15 +1,29 @@
-import { BugButton } from "app/providers/ErrorBoundary";
-import { useTranslation } from "react-i18next";
+import { BugButton } from 'app/providers/ErrorBoundary';
+import { Counter } from 'entities/Counter';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Input } from 'shared/ui/Input/Input';
 
 const MainPage = () => {
-  const { t } = useTranslation("main");
+    const { t } = useTranslation('main');
 
-  return (
-    <div>
-      <BugButton />
-      {t("Главная страница")}
-    </div>
-  );
+    const [value, setValue] = useState('');
+
+    const onChange = (val: string) => {
+        setValue(val);
+    };
+
+    return (
+        <div>
+            {t('Главная страница')}
+            <Input
+                autofocus={false}
+                placeholder="Введите текст"
+                onChange={onChange}
+                value={value}
+            />
+        </div>
+    );
 };
 
 export default MainPage;
