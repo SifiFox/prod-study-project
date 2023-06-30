@@ -21,23 +21,26 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ThemeButton;
   square?: boolean;
   size?: ButtonSize;
+  disabled?: boolean;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
     const {
-        className, children, theme, square, size, ...otherProps
+        className, children, theme, square, size, disabled, ...otherProps
     } = props;
 
     const mods: Record<string, boolean> = {
         [cls[theme]]: true,
         [cls[size]]: true,
         [cls.square]: square,
+        [cls.disabled]: disabled,
     };
 
     return (
         // eslint-disable-next-line react/button-has-type
         <button
             className={classNames(cls.Button, mods, [className])}
+            disabled={disabled}
             {...otherProps}
         >
             {children}
