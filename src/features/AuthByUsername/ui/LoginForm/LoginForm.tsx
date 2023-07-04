@@ -9,6 +9,7 @@ import { loginActions } from 'features/AuthByUsername/model/slice/loginSlice';
 import { getLoginState } from 'features/AuthByUsername/model/selectors/getLoginState/getLoginState';
 // eslint-disable-next-line max-len
 import { loginByUsername } from 'features/AuthByUsername/model/services/loginByUsername/loginByUsername';
+import { TextTheme, Text } from 'shared/ui/Text/Text';
 import cls from './LoginForm.module.scss';
 
 interface LoginFormProps{
@@ -35,9 +36,9 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
 
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
-
+            <Text title={t('Форма авторизации')} />
             {
-                error && <div>{error}</div>
+                error && <Text text={error} theme={TextTheme.ERROR} />
             }
 
             <Input
