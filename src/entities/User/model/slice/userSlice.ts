@@ -7,10 +7,7 @@ export interface userState {
 }
 
 const initialState: UserSchema = {
-    authData: {
-        id: '1',
-        username: 'test',
-    },
+    authData: undefined,
 };
 
 export const userSlice = createSlice({
