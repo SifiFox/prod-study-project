@@ -28,6 +28,7 @@ export default {
     rootDir: '../../',
     globals: {
         __IS_DEV__: true,
+        __API__: '',
         'ts-jest': {
             tsconfig: '../../tsconfig.json',
         },
