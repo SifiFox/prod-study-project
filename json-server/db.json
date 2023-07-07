@@ -15,5 +15,14 @@
         "password": "123"
       }
     ],
-    "profile": { "name": "typicode" }
+    "profile": { 
+      "firstname": "Dmirty",
+      "lastname": "Sififox",
+      "age": "23",
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "SifiFox",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXp3DxP80ArpRzsB0XWBG9Ow5GeuefbLrUHw&usqp=CAU"
+     }
   }
