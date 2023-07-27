@@ -1,28 +1,39 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server1", "author": "typicode" },
-      { "id": 2, "title": "json-server2", "author": "typicode" },
-      { "id": 3, "title": "json-server3", "author": "typicode" },
-      { "id": 4, "title": "json-server4", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "users": [
-      {
-        "id": 1,
-        "username": "admin",
-        "password": "123"
-      }
-    ],
-    "profile": { 
-      "firstname": "Dmirty",
-      "lastname": "Sififox",
-      "age": "23",
-      "currency": "RUB",
-      "country": "Belarus",
-      "city": "Minsk",
-      "username": "SifiFox",
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXp3DxP80ArpRzsB0XWBG9Ow5GeuefbLrUHw&usqp=CAU"
-     }
-  }
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server1",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server2",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "title": "json-server3",
+      "author": "typicode"
+    },
+    {
+      "id": 4,
+      "title": "json-server4",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "profile": {}
+}
