@@ -40,6 +40,7 @@ export const profileSlice = createSlice({
                     state.isLoading = false;
                     state.data = action.payload;
                     state.form = action.payload;
+                    console.log(state.data);
                 },
             )
             .addCase(fetchProfileData.rejected, (state, action) => {

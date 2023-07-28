@@ -2,34 +2,37 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui/Select/Select';
 import { memo, useCallback } from 'react';
-import { Currency } from 'entities/Currency';
+import { Country } from 'entities/Country';
 
-interface CurrencySelectProps{
+interface CountrySelectProps{
     className?: string;
-    value?: Currency;
-    onChange?: (value: Currency) => void;
+    value?: Country;
+    onChange?: (value: Country) => void;
     readonly?: boolean
 }
 
 const options = [
-    { value: Currency.RUB, content: Currency.RUB },
-    { value: Currency.EUR, content: Currency.EUR },
-    { value: Currency.USD, content: Currency.USD },
+    { value: Country.Armenia, content: Country.Armenia },
+    { value: Country.Belarus, content: Country.Belarus },
+    { value: Country.Kazakhstan, content: Country.Kazakhstan },
+    { value: Country.Russia, content: Country.Russia },
+    { value: Country.Ukraine, content: Country.Ukraine },
+
 ];
 
-export const CurrencySelect = memo(({
+export const CountrySelect = memo(({
     className, value, onChange, readonly,
-}: CurrencySelectProps) => {
+}: CountrySelectProps) => {
     const { t } = useTranslation();
 
     const onChangeHandler = useCallback(() => {
-        onChange?.(value as Currency);
+        onChange?.(value as Country);
     }, [onChange, value]);
 
     return (
         <Select
             value={value}
-            label={t('Укажите валюту')}
+            label={t('Укажите страну')}
             options={options}
             className={classNames('', {}, [className])}
             onChange={onChangeHandler}

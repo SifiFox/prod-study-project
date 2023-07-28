@@ -35,5 +35,14 @@
       "password": "123"
     }
   ],
-  "profile": {}
+  "profile": {
+    "firstname": "Name",
+    "lastname": "Surname",
+    "age": 24,
+    "city": "Minsk",
+    "username": "SifiFox",
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpVDEKxJUaZwFXdHwZ2HHH_r-QI_wEzQGiUQ&usqp=CAU",
+    "currency": "RUB",
+    "country": "Belarus"
+  }
 }
