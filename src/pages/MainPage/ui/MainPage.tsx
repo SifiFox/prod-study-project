@@ -14,12 +14,7 @@ const MainPage = () => {
     return (
         <div>
             {t('Главная страница')}
-            <Input
-                autofocus={false}
-                placeholder={t('Введите текст')}
-                onChange={onChange}
-                value={value}
-            />
+
         </div>
     );
 };

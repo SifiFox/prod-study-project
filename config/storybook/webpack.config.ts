@@ -1,5 +1,5 @@
-import webpack, { DefinePlugin } from 'webpack';
 import path from 'path';
+import webpack, { DefinePlugin } from 'webpack';
 import { BuildPaths } from '../build/types/config';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 
@@ -31,6 +31,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
         config!.plugins!.push(new DefinePlugin({
             __IS_DEV__: JSON.stringify(true),
             __API__: JSON.stringify(''),
+            __PROJECT__: JSON.stringify('storybook'),
         }));
     }
 
