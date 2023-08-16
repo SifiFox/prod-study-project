@@ -8,6 +8,7 @@ export interface userState {
 
 const initialState: UserSchema = {
     authData: undefined,
+    _inited: false,
 };
 
 export const userSlice = createSlice({
@@ -22,6 +23,7 @@ export const userSlice = createSlice({
             if (user) {
                 state.authData = JSON.parse(user);
             }
+            state._inited = true;
         },
         logout: (state) => {
             state.authData = undefined;
